@@ -1,0 +1,39 @@
+.body{
+    background-image: url("../images/3.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -150px;
+}
+
+.box{
+    border: 5px solid #21ffff;
+    border-radius:10px ;
+}
+.item{
+    width: 200px;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: #fff;
+}
+
+.searchicon{
+    top: 6px;
+    left: 20px;
+}
+.input-search{
+    padding-left: 60px;
+}
+.search-item{
+    width: 700px;
+    height: 350px;
+    background-image: url("../images/snow.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.cursor{
+    cursor: pointer;
+}

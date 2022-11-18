@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>weather</title>
+</head>
+<body class="body">
+    <!-- 
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    -->
+    <main>
+        
+        <div class="container">
+            <form  class="form mt-3 mx-auto w-25">
+                <label class="w-100 position-relative">
+                    <img class="position-absolute searchicon" src="./images/icons/search.gif" width="30" height="30" alt="">
+                    <input class="form-control w-100 input-search" type="search" placeholder="Enter city">
+                </label>
+            </form>
+            <div class="box mt-3 mb-3">
+                <ul class="list d-flex justify-content-between align-items-center list-unstyled mb-0">
+                </ul>
+            </div>
+            <!-- <p class="text-center fs-3 mb-0">Searching city</p> -->
+            <div class="row">
+                <div class="col-3 ">
+                    <p class="fs-3 fw-bold text-center text-danger">Last searched</p>
+                    <ul class="lasts list-unstyled">
+                        
+                    </ul>
+                </div>
+                <div class="search-list col-9">        
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    
+    <template class="template">
+        <li class="item m-2 ">
+            <div >
+                <p class="city fs-3 fw-bolder text-center">Toshkent</p>
+                <div class="row mb-3  text-center">
+                    <span class="col-12 fs-3 fw-bold d-block"><span class=" celcius ">23</span> &#x2103;</span>
+                    <!-- <time class="col-6 time fs-6"> 12:00</time> -->
+                </div>
+                <div class="row align-items-center mb-3">
+                    <div class="col-6 text-end">
+                        <img class="weather-img img-fluid" src=""  width="50" height="50" alt="weather">
+                    </div>
+                    <div class="col-6 text-start">
+                        <span class="weather-type">Rain</span>
+                    </div>                               
+                </div>
+                <a class="d-flex justify-content-center align-items-center text-decoration-none text-dark link" href="" target="blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-fill me-2" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"/>
+                    </svg>
+                    Location
+                </a>
+            </div>
+        </li>
+    </template>
+    
+    <template class="search-template">
+        <div class="search-item m-2 bg-light text-danger">
+            <p class="search-city fs-3 fw-bolder text-center">Toshkent</p>                 
+            <div class="row mb-3  text-end align-items-center">
+                <span class="col-3 fs-2 d-block"><span class="search-celcius ">23</span> &#x2103;</span>
+                <time class="col-4 fs-3 time"> 12:00</time>
+                <a class="col-5 fs-2 d-flex justify-content-center align-items-center text-decoration-none text-danger search-link" href="" target="blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-fill me-2" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"/>
+                    </svg>
+                    Location
+                </a>
+            </div>                                    
+        </div>
+    </template>
+    
+    
+    <script src="./main.js"></script>
+</body>
+</html>
